@@ -42,22 +42,19 @@ The system uses YOLOv8 to detect vehicles, ByteTrack to track them across frames
 
 ## Tech Stack
 
-- Python
-- Ultralytics YOLOv8
-- ByteTrack
-- OpenCV
-- NumPy
-- pytest
-
+| Technology | Purpose |
+|---|---|
+| Python | Programming language |
+| Ultralytics YOLOv8 | Vehicle detection using deep learning |
+| ByteTrack | Tracking vehicles across video frames |
+| OpenCV | Image and video processing |
+| NumPy | Numerical calculations and array operations |
+| pytest | Automated software testing |
 ## Screenshots
 
-### Screenshot
-
-![Vehicle detection and counting demo](docs/assets/vehicle-detection-demo.png)
+![Vehicle detection, tracking, and counting result](docs/assets/vehicle-detection-demo.png)
 
 ## Demo
-
-### Demo Video
 
 [Watch the annotated demo video](outputs/sample_fixed/annotated.mp4)
 
@@ -153,29 +150,29 @@ Each run generates an annotated video, a crossing-event CSV, and a JSON summary 
 ## Project Structure
 
 ```text
-docs/
-  assets/
-    vehicle-detection-demo.png
-  validation.md
-models/
-  README.md
-outputs/
-  sample_fixed/
-    annotated.mp4
-    crossing_events.csv
-    summary.json
-src/
-  vehicle_flow/
-tests/
-run.py
-requirements.txt
-pyproject.toml
-LICENSE
-README.md
+.
+├── docs/
+│   ├── assets/
+│   │   └── vehicle-detection-demo.png
+│   └── validation.md
+├── models/
+│   └── README.md
+├── outputs/
+│   └── sample_fixed/
+│       ├── annotated.mp4
+│       ├── crossing_events.csv
+│       └── summary.json
+├── src/
+│   └── vehicle_flow/
+├── tests/
+├── run.py
+├── requirements.txt
+├── pyproject.toml
+├── LICENSE
+└── README.md
 ```
 
 ## Testing
-
 Run the test suite:
 
 ```bash
