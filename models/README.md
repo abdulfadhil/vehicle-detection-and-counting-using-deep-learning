@@ -1,6 +1,6 @@
 # Model Weights
 
-This project uses YOLOv8n for vehicle detection.
+The application uses YOLOv8 model weights for vehicle detection. The README run examples use YOLOv8n, while the published sample results in `outputs/sample_fixed/` were generated using YOLOv8s.
 
 **Required file:** `models/yolov8n.pt`
 

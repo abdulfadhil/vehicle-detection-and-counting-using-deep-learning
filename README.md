@@ -151,25 +151,25 @@ Each run generates an annotated video, a crossing-event CSV, and a JSON summary 
 
 ```text
 .
-├── docs/
-│   ├── assets/
-│   │   └── vehicle-detection-demo.png
-│   └── validation.md
-├── models/
-│   └── README.md
-├── outputs/
-│   └── sample_fixed/
-│       ├── annotated.mp4
-│       ├── crossing_events.csv
-│       └── summary.json
-├── src/
-│   └── vehicle_flow/
-├── tests/
-├── run.py
-├── requirements.txt
-├── pyproject.toml
-├── LICENSE
-└── README.md
+|-- docs/
+|   |-- assets/
+|   |   `-- vehicle-detection-demo.png
+|   `-- validation.md
+|-- models/
+|   `-- README.md
+|-- outputs/
+|   `-- sample_fixed/
+|       |-- annotated.mp4
+|       |-- crossing_events.csv
+|       `-- summary.json
+|-- src/
+|   `-- vehicle_flow/
+|-- tests/
+|-- run.py
+|-- requirements.txt
+|-- pyproject.toml
+|-- LICENSE
+`-- README.md
 ```
 
 ## Testing
