@@ -50,7 +50,8 @@ The system uses YOLOv8 to detect vehicles, ByteTrack to track them across frames
 | OpenCV | Image and video processing |
 | NumPy | Numerical calculations and array operations |
 | pytest | Automated software testing |
-## Screenshots
+
+## Screenshot
 
 ![Vehicle detection, tracking, and counting result](docs/assets/vehicle-detection-demo.png)
 
@@ -67,9 +68,14 @@ The included sample run produced the following results:
 | Frames processed | 300 |
 | Resolution | 640 × 360 |
 | Video frame rate | 30 FPS |
-| Crossing events | 14 |
+| Counting line position | 180 pixels |
+| Direction A events | 0 |
+| Direction B events | 14 |
+| Total crossing events | 14 |
 | Cars counted | 13 |
 | Trucks counted | 1 |
+| Buses counted | 0 |
+| Motorcycles counted | 0 |
 
 These are observed sample-run results, not model-accuracy measurements.
 
@@ -82,7 +88,7 @@ These are observed sample-run results, not model-accuracy measurements.
 ### Requirements
 
 - Python 3.10 or later
-- Compatible YOLO model weights
+- YOLOv8 model weights (not included; see [models/README.md](models/README.md))
 
 ### Installation
 
@@ -158,17 +164,24 @@ Each run generates an annotated video, a crossing-event CSV, and a JSON summary 
 |-- models/
 |   `-- README.md
 |-- outputs/
+|   |-- .gitkeep
 |   `-- sample_fixed/
 |       |-- annotated.mp4
 |       |-- crossing_events.csv
 |       `-- summary.json
 |-- src/
 |   `-- vehicle_flow/
+|       |-- __init__.py
+|       `-- counter.py
 |-- tests/
-|-- run.py
-|-- requirements.txt
-|-- pyproject.toml
+|   |-- test_counter.py
+|   |-- test_run.py
+|   `-- test_video_io.py
+|-- .gitignore
 |-- LICENSE
+|-- pyproject.toml
+|-- requirements.txt
+|-- run.py
 `-- README.md
 ```
 
